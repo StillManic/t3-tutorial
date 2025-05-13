@@ -66,9 +66,19 @@ export function Drive() {
           onFolderClick={navigateToFolder}
           onNavigateUp={navigateUp}
           onUploadClick={handleUploadClick}
+          onFileClick={function (fileName: string): void {
+            throw new Error("Function not implemented.");
+          }}
+          setCurrentPath={function (path: string[]): void {
+            throw new Error("Function not implemented.");
+          }}
         />
       </div>
-      <UploadModal isOpen={isUploadModalOpen} onClose={() => setIsUploadModalOpen(false)} currentPath={currentPath} />
+      <UploadModal
+        isOpen={isUploadModalOpen}
+        onClose={() => setIsUploadModalOpen(false)}
+        currentPath={currentPath}
+      />
     </div>
-  )
+  );
 }
